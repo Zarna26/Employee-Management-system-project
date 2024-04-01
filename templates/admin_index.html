@@ -1,0 +1,31 @@
+{% extends 'admin_home_base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    {% block main %}
+    
+    <h1 class=" p-2" style="border-bottom : 5px solid rgb(27, 19, 161) ; color: rgb(5, 5, 5);">Admin Dashboard</h1>
+    
+    <div class="row text-center">
+        <div class="col-sm-12 px-5 pt-5">
+            <div class="container-sm shadow" style="border: 20px; background-color: rgba(36, 34, 34, 0.9);">
+                <div class="card-body">
+                    <h1 class="text-capitalize font-weight-bold" style="color: rgb(245, 245, 251); ">Welcome Back To Admin Dashboard</h1>
+                    <h1 class="text-capitalize font-weight-bold" style="color: rgb(229, 229, 239);" > {{request.user.username}}</h1>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+    {% endblock %}
+</body>
+</html>

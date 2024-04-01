@@ -1,0 +1,113 @@
+
+{% extends 'emp_home_base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    
+</head>
+<body>
+    {% block main %}
+    
+    {% if error %}
+        <div class="alert alert-danger">{{ error }} Someting went wrong..</div>
+    {% else%}
+    {% for message in messages %}
+        <script>
+          alert('Experience Detail Updated Successfully..');
+        </script>
+        
+    {% endfor %}
+    {% endif %}
+    
+    
+    
+
+    <div class="card shadow m-1 mx-auto" style="width:1200px ; color:rgb(6, 6, 6); ">
+        <div class="card-body">
+            <a href="{% url 'edit_experience' %}" class=" btn btn-primary float-right">Edit Work Experience</a>
+            <h1 class="p-0" style="border-bottom: 5px solid rgb(54, 32, 146)">
+                My Work Experience
+            </h1>
+            
+            <b>
+                <div class="container-lg  font-weight-bold;" > 
+                    <table class="table table-bordered mt-3  " style="color:rgb(10, 10, 10);">
+                        <tr>
+                            <th>First company name</th>
+                            <td>{{experience.company1_name}}</td>
+                        </tr>
+        
+                        <tr>
+                            <th>First company designation</th>
+                            <td>{{experience.company1_designation}}</td>
+                        </tr>
+        
+                        <tr>
+                            <th>First company salary</th>
+                            <td>{{experience.company1_salary}}</td>
+                        </tr>
+        
+                        <tr>
+                            <th>First company duration</th>
+                            <td>{{experience.company1_duration}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Second company name</th>
+                            <td>{{experience.company2_name}}</td>
+                        </tr>
+        
+                        <tr>
+                            <th>Second company designation</th>
+                            <td>{{experience.company2_designation}}</td>
+                        </tr>
+        
+                        <tr>
+                            <th>Second company salary</th>
+                            <td>{{experience.company2_salary}}</td>
+                        </tr>
+        
+                        <tr>
+                            <th>Second company duration</th>
+                            <td>{{experience.company2_duration}}</td>
+                        </tr>
+        
+
+                        <tr>
+                            <th>Third company name</th>
+                            <td>{{experience.company3_name}}</td>
+                        </tr>
+        
+                        <tr>
+                            <th>Third company designation</th>
+                            <td>{{experience.company3_designation}}</td>
+                        </tr>
+        
+                        <tr>
+                            <th>Third company salary</th>
+                            <td>{{experience.company3_salary}}</td>
+                        </tr>
+        
+                        <tr>
+                            <th>Third company duration</th>
+                            <td>{{experience.company3_duration}}</td>
+                        </tr>
+        
+        
+                    </table>
+                    
+                </b>
+
+
+        </div>
+        
+    </div>
+    
+    
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .float-right {
+        position: absolute;
+        top: 50px; 
+        right: 50px; 
+    }
+</style>
+</head>
+      
+   
+<body>
+    {% load static %}
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/new.gif' %}" alt="Los Angeles" width="1100" height="700">
+            <img class="float-right" src="{%static 'images/logo.png'%}" alt="tach" width="200" height="100">
+          </div>
+      </div>
+    
+</body>
+
+
+
+
+<div class="container-fluid bg-dark" style="height: 100px;">
+
+    <h2 class="text-center pt-3" style="color:white;">Employee management system</h2>
+    <p class="text-center text-primary">&copy; zarna kalsariya</p>
+</div>
+</html>

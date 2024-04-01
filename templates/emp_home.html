@@ -1,0 +1,31 @@
+{% extends 'emp_home_base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    {% block main %}
+    
+    <h1 class=" p-2" style="border-bottom : 5px solid rgb(27, 19, 161) ; color: rgb(5, 5, 5);"> Dashboard</h1>
+    
+    <div class="row text-center">
+        <div class="col-sm-12 px-5 pt-5">
+            <div class="container-sm shadow" style="border: 20px; background-color: rgba(17, 1, 1, 0.7);">
+                <div class="card-body">
+                    <h1 class="text-capitalize font-weight-bold" style="color: rgb(243, 241, 241); "> Welcome Back To Employee Dashboard... </h1>
+                    <h1 class="text-capitalize font-weight-bold" style="color: rgb(248, 244, 244);" > {{request.user.first_name}} {{request.user.last_name}}</h1>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+    {% endblock %}
+</body>
+</html>

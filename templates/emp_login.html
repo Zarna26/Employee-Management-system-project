@@ -1,0 +1,85 @@
+{% include 'header.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Center the card horizontally and vertically */
+        .center-card {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    {% load static %}
+
+    <style>     
+     
+     body{
+          background-image:  url("{% static 'images/newcanva.png' %}");
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.3); /* Background color with opacity */
+        }
+    </style>
+</head>
+<body>
+    <div class="center-card">
+        <div class="card shadow" style="width:600px; color:rgb(0, 7, 7) ">
+            <div class="card-body" style="text-align: center;">
+                <h2 style="border-bottom: 5px solid rgb(1, 0, 6)">
+                    Employee Login
+                </h2>
+            </div>
+
+            <div class="container-fluid">
+                <form method="post" name="login">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label>Email ID</label>
+                        <input type="email" name="email_id" class="form-control" placeholder="Enter Your email ID" required/>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control" placeholder="Enter password" required/>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <!-- Submit button -->
+                    <center>
+                    <input type="submit" value="Login" class="btn btn-primary"></center>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   
+
+
+    {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% else%}
+    {% for message in messages %}
+        <script>
+          alert('Login Successfully..');
+          window.location.href = "{% url 'emp_home' %}";
+        </script>
+        
+    {% endfor %}
+    {% endif %}
+
+
+</body>
+</html>
