@@ -1,2 +1,2 @@
 # Employee-Management-system-project
-  using phthon ,html,css,bootstrap,java script.
+  using python(Django framework) ,html,css,bootstrap,javascript.
