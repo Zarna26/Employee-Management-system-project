@@ -21,6 +21,6 @@ This is a robust **Employee Management System** built using the Django framework
 🛠️ Tech Stack
 - Frontend: HTML5, CSS3, Bootstrap
 - Backend: Django (Python)
-- Database: SQLite (default) / PostgreSQL (for production)
+- Database: SQLite (default) (for production)
 - Authentication: Django's built-in authentication system
 
